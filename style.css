@@ -552,3 +552,49 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ===== Separate why page + cleaner reviews ===== */
+.why-page-hero {
+  padding: 74px 0 22px;
+  background: radial-gradient(circle at 50% 0%, rgba(201,164,76,.18), transparent 34%), #000;
+}
+.why-page-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: 1.12;
+  margin-bottom: 14px;
+}
+.why-page-hero + .trust-section { padding-top: 32px; }
+.why-order-cta { padding-top: 20px; }
+
+.reviews-main {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+.reviews-live { display: grid; gap: 16px; }
+.reviews-grid.compact-one .review-card:nth-child(n+2) { display: none; }
+.write-review-toggle {
+  width: min(100%, 360px);
+  margin: 4px auto 0;
+  min-height: 56px;
+}
+.review-form-collapsed { display: none !important; }
+.review-form-open {
+  display: grid !important;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  position: static !important;
+}
+.reviews-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reviews-toggle-btn { margin-inline: auto; }
+@media (max-width: 780px) {
+  .reviews-main { gap: 14px; }
+}
