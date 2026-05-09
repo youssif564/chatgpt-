@@ -371,3 +371,77 @@
 .seo-keyword-card{text-align:start}.seo-info-box{margin:18px 0 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden}.seo-info-item{padding:16px 18px;display:flex;flex-direction:column;gap:6px}.seo-info-item:not(:last-child){border-bottom:1px solid rgba(255,255,255,.08)}.seo-info-item strong{color:var(--gold2);font-size:1rem}.seo-info-item span{color:rgba(255,255,255,.78);line-height:1.8}.seo-intro-compact{margin-top:14px}@media(max-width:620px){.seo-keyword-card{text-align:center}.seo-info-item{text-align:start}.step-row{grid-template-columns:58px 1fr;padding:18px}.step-icon{width:50px;height:50px;border-radius:16px;font-size:1.45rem;margin-bottom:0}.trust-badges{grid-template-columns:1fr;gap:10px}.price-group{gap:10px}.new-price{font-size:1.5rem}}
 
 .new-price,.old-price{white-space:nowrap}
+
+
+
+/* ===== Cleaner homepage: move trust data into SEO box ===== */
+.social-proof {
+  display: none !important;
+}
+
+.hero .trust-badges {
+  display: none !important;
+}
+
+.seo-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 24px 0 18px;
+  padding: 14px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.seo-proof-grid div {
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.seo-proof-grid div:not(:last-child) {
+  border-inline-end: 1px solid rgba(255,255,255,0.08);
+}
+
+.seo-proof-grid strong {
+  display: block;
+  color: var(--gold2);
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+.seo-proof-grid span {
+  display: block;
+  color: rgba(255,255,255,0.68);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+@media (max-width: 620px) {
+  .seo-proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .seo-proof-grid div {
+    padding: 14px 8px;
+  }
+
+  .seo-proof-grid div:not(:last-child) {
+    border-inline-end: 0;
+  }
+
+  .seo-proof-grid div:nth-child(1),
+  .seo-proof-grid div:nth-child(2) {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .seo-proof-grid div:nth-child(odd) {
+    border-inline-end: 1px solid rgba(255,255,255,0.08);
+  }
+}
