@@ -383,3 +383,21 @@ translations.ar.faqCtaTitle = "جاهز تطلب Modo؟";
 translations.en.faqCtaTitle = "Ready to order Modo?";
 translations.ar.faqCtaText = "اطلب الآن وسيتم تأكيد تفاصيل الطلب معك على واتساب. الدفع عند الاستلام متاح داخل مصر.";
 translations.en.faqCtaText = "Order now and we will confirm your order on WhatsApp. Cash on Delivery is available in Egypt.";
+
+
+
+/* ===== Story separate page translation keys ===== */
+translations.ar.storyPageTitle = "قصة Modo Wallet";
+translations.en.storyPageTitle = "The Modo Wallet Story";
+translations.ar.storyPageSubtitle = "منتج بدأ من موقف حقيقي: محفظة ضاعت، واحتياج واضح لمحفظة شيك وآمنة في نفس الوقت.";
+translations.en.storyPageSubtitle = "A product that started from a real moment: a lost wallet and the need for something stylish and safer.";
+translations.ar.storyValue1 = "شكل أنيق يناسب الشغل، الجامعة، الخروج، والهدايا.";
+translations.en.storyValue1 = "An elegant look for work, university, daily outings, and gifts.";
+translations.ar.storyValue2 = "إحساس premium وخامة تعيش معاك في الاستخدام اليومي.";
+translations.en.storyValue2 = "A premium feel and material made to handle everyday use.";
+translations.ar.storyValue3 = "تتبع بلوتوث، صوت إنذار، وتنبيه عند الابتعاد.";
+translations.en.storyValue3 = "Bluetooth tracking, alarm sound, and out-of-range alerts.";
+translations.ar.storyCtaTitle = "جرّب Modo بنفسك";
+translations.en.storyCtaTitle = "Try Modo yourself";
+translations.ar.storyCtaText = "اطلب الآن والدفع عند الاستلام داخل مصر. ولو عندك أي سؤال، تواصل معنا على واتساب.";
+translations.en.storyCtaText = "Order now with Cash on Delivery in Egypt. If you have any question, message us on WhatsApp.";
