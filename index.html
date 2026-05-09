@@ -123,6 +123,7 @@
       <nav class="nav-links" id="navLinks">
         <a href="#products" data-i18n="navProducts">المنتجات</a>
         <a href="story.html" data-i18n="navStory">قصتنا</a>
+        <a href="why.html" data-i18n="navWhy">ليه تختار مودو</a>
         <a href="#how" data-i18n="navHow">طريقة الاستخدام</a>
         <a href="#reviews" data-i18n="navReviews">التقييمات</a>
         <a href="faq.html" data-i18n="navFAQ">الأسئلة</a>
@@ -234,67 +235,49 @@
       </div>
     </section>
 
-    <section class="section trust-section" id="trust">
-      <div class="container trust-grid">
-        <div class="trust-copy reveal">
-          <span data-i18n="trustEyebrow">ليه تختار Modo؟</span>
-          <h2 data-i18n="trustTitle">شراء آمن وتجربة مريحة</h2>
-          <p data-i18n="trustText">كل التفاصيل مصممة لتخلي قرار الشراء أسهل: دفع عند الاستلام، دعم واتساب، وسياسة استبدال واضحة.</p>
-        </div>
-        <div class="trust-cards">
-          <div class="trust-card reveal"><strong>🛡️</strong><h3 data-i18n="trust1Title">ضمان جودة</h3><p data-i18n="trust1Text">فحص المنتج قبل الشحن وتغليف مناسب.</p></div>
-          <div class="trust-card reveal"><strong>↩️</strong><h3 data-i18n="trust2Title">استبدال خلال 7 أيام</h3><p data-i18n="trust2Text">في حالة وجود عيب تصنيع.</p></div>
-          <div class="trust-card reveal"><strong>💵</strong><h3 data-i18n="trust3Title">الدفع عند الاستلام</h3><p data-i18n="trust3Text">ادفع لما تستلم المنتج.</p></div>
-          <div class="trust-card reveal"><strong>📞</strong><h3 data-i18n="trust4Title">دعم واتساب</h3><p data-i18n="trust4Text">تواصل سريع قبل وبعد الطلب.</p></div>
-        </div>
-      </div>
-    </section>
-<section class="section reviews-section" id="reviews">
+    <section class="section reviews-section" id="reviews">
       <div class="container">
         <div class="section-head reveal">
           <span data-i18n="reviewsEyebrow">آراء العملاء</span>
-          <h2 data-i18n="reviewsTitle">عملاء وثقوا في Modo</h2>
+          <h2 data-i18n="reviewsTitle">تقييمات عملاء Modo</h2>
           <p data-i18n="reviewsSubtitle">آراء حقيقية من عملاء جربوا Modo وبيشاركوا تجربتهم.</p>
         </div>
-        <div class="reviews-layout">
-          <form class="live-review-form reveal" id="reviewForm">
-            <h3 data-i18n="writeReviewTitle">اكتب تقييمك</h3>
-            <label for="reviewName" data-i18n="reviewNameLabel">الاسم</label>
-            <input id="reviewName" type="text" required maxlength="40" placeholder="مثال: أحمد">
 
-            <label for="reviewCity" data-i18n="reviewCityLabel">المدينة</label>
-            <input id="reviewCity" type="text" required maxlength="40" placeholder="مثال: القاهرة">
-
-            <label for="reviewRating" data-i18n="reviewRatingLabel">التقييم</label>
-            <select id="reviewRating" required>
-              <option value="5">★★★★★ 5</option>
-              <option value="4">★★★★☆ 4</option>
-              <option value="3">★★★☆☆ 3</option>
-              <option value="2">★★☆☆☆ 2</option>
-              <option value="1">★☆☆☆☆ 1</option>
-            </select>
-
-            <label for="reviewText" data-i18n="reviewTextLabel">رأيك في المنتج</label>
-            <textarea id="reviewText" required maxlength="280" placeholder="اكتب تقييمك هنا..."></textarea>
-
-            <label for="reviewImage" data-i18n="reviewImageLabel">صورة اختيارية للمنتج</label>
-            <input id="reviewImage" type="file" accept="image/*">
-
-            <button class="btn btn-primary" type="submit" id="reviewSubmitBtn" data-i18n="submitReview">نشر التقييم مباشرة</button>
-            <p class="form-note" id="reviewStatus" data-i18n="reviewStatusReady">التقييم سيظهر مباشرة بعد النشر.</p>
-          </form>
-
+        <div class="reviews-main">
           <div class="reviews-live">
-            <div class="reviews-toolbar reveal">
+            <div class="reviews-toolbar">
               <h3 data-i18n="latestReviews">أحدث التقييمات</h3>
               <span id="reviewModeBadge">Live</span>
             </div>
-            <div class="reviews-grid" id="reviewsGrid"></div>
+            <div class="reviews-grid compact-one" id="reviewsGrid"></div>
             <button class="btn btn-secondary reviews-toggle-btn" type="button" id="reviewsToggleBtn" data-i18n="viewAllReviews">عرض كل التقييمات</button>
           </div>
+
+          <button class="btn btn-primary write-review-toggle" type="button" id="writeReviewToggle" data-i18n="writeReviewTitle">اكتب تقييمك</button>
+
+          <form class="live-review-form review-form-collapsed" id="reviewForm">
+            <h3 data-i18n="writeReviewTitle">اكتب تقييمك</h3>
+            <label for="reviewName" data-i18n="reviewNameLabel">الاسم</label>
+            <input id="reviewName" type="text" placeholder="مثال: أحمد" required />
+            <label for="reviewCity" data-i18n="reviewCityLabel">المدينة</label>
+            <input id="reviewCity" type="text" placeholder="مثال: القاهرة" required />
+            <label for="reviewRating" data-i18n="reviewRatingLabel">التقييم</label>
+            <select id="reviewRating">
+              <option value="5">★★★★★ 5</option>
+              <option value="4">★★★★☆ 4</option>
+              <option value="3">★★★☆☆ 3</option>
+            </select>
+            <label for="reviewText" data-i18n="reviewTextLabel">رأيك في المنتج</label>
+            <textarea id="reviewText" placeholder="اكتب تقييمك هنا..." required></textarea>
+            <label for="reviewImage" data-i18n="reviewImageLabel">صورة اختيارية للمنتج</label>
+            <input id="reviewImage" type="file" accept="image/*" />
+            <button class="btn btn-primary" type="submit" id="reviewSubmitBtn" data-i18n="submitReview">نشر التقييم مباشرة</button>
+            <p class="form-note" id="reviewStatus" data-i18n="reviewStatusReady">التقييم سيظهر مباشرة بعد النشر.</p>
+          </form>
         </div>
       </div>
     </section>
+
 <section class="section order-section" id="order">
       <div class="container order-grid">
         <div class="order-summary reveal">
