@@ -401,3 +401,41 @@ translations.ar.storyCtaTitle = "جرّب Modo بنفسك";
 translations.en.storyCtaTitle = "Try Modo yourself";
 translations.ar.storyCtaText = "اطلب الآن والدفع عند الاستلام داخل مصر. ولو عندك أي سؤال، تواصل معنا على واتساب.";
 translations.en.storyCtaText = "Order now with Cash on Delivery in Egypt. If you have any question, message us on WhatsApp.";
+
+
+
+/* ===== Why page + cleaner reviews controls ===== */
+translations.ar.navWhy = "ليه تختار مودو";
+translations.en.navWhy = "Why Modo?";
+translations.ar.whyPageTitle = "شراء آمن وتجربة مريحة";
+translations.en.whyPageTitle = "Safe purchase and easy experience";
+translations.ar.whyPageSubtitle = "كل التفاصيل مصممة عشان تطلب وانت مطمن: دفع عند الاستلام، دعم واتساب، وجودة واضحة.";
+translations.en.whyPageSubtitle = "Everything is designed so you can order confidently: Cash on Delivery, WhatsApp support, and clear quality.";
+translations.ar.whyCtaTitle = "اطلب Modo وأنت مطمن";
+translations.en.whyCtaTitle = "Order Modo with confidence";
+translations.ar.whyCtaText = "الدفع عند الاستلام متاح، وسيتم تأكيد الطلب معك على واتساب قبل الشحن.";
+translations.en.whyCtaText = "Cash on Delivery is available, and your order will be confirmed on WhatsApp before shipping.";
+
+function setupReviewCollapseControls() {
+  const toggle = document.getElementById("writeReviewToggle");
+  const form = document.getElementById("reviewForm");
+  if (!toggle || !form) return;
+  toggle.addEventListener("click", () => {
+    const isOpen = form.classList.toggle("review-form-open");
+    form.classList.toggle("review-form-collapsed", !isOpen);
+    if (isOpen) form.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+setupReviewCollapseControls();
+
+updateReviewsToggle = function() {
+  const btn = document.getElementById("reviewsToggleBtn");
+  const grid = document.getElementById("reviewsGrid");
+  if(!btn || !grid) return;
+  const hasMore = latestReviewsData.length > 1;
+  btn.style.display = hasMore ? "inline-flex" : "none";
+  btn.textContent = hasMore ? (reviewsExpanded ? t("showLessReviews") : t("viewAllReviews")) : "";
+  grid.classList.toggle("compact-one", !reviewsExpanded && hasMore);
+  grid.classList.toggle("compact", false);
+};
+if (typeof updateReviewsToggle === "function") updateReviewsToggle();
