@@ -489,3 +489,66 @@
   color: var(--muted);
   margin-bottom: 20px;
 }
+
+
+
+/* ===== Separate story page ===== */
+.story-page-hero {
+  padding: 74px 0 22px;
+  background: radial-gradient(circle at 50% 0%, rgba(201,164,76,.18), transparent 34%), #000;
+}
+
+.story-page-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: 1.12;
+  margin-bottom: 14px;
+}
+
+.story-page-hero + .story-section {
+  padding-top: 32px;
+}
+
+.story-values-section {
+  padding-top: 24px;
+  background: #000;
+}
+
+.story-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.story-value-card {
+  padding: 24px;
+  border-radius: 26px;
+  background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+  border: 1px solid rgba(201,164,76,.18);
+  box-shadow: var(--shadow);
+}
+
+.story-value-card strong {
+  display: inline-flex;
+  color: var(--gold2);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.story-value-card h3 {
+  color: var(--gold2);
+  margin-bottom: 8px;
+}
+
+.story-value-card p {
+  color: var(--muted);
+}
+
+.story-order-cta {
+  padding-top: 20px;
+}
+
+@media (max-width: 780px) {
+  .story-values-grid {
+    grid-template-columns: 1fr;
+  }
+}
